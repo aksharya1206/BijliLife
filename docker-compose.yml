@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: bijlilife-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: bijlilife_user
+      POSTGRES_PASSWORD: bijlilife_secret_password
+      POSTGRES_DB: bijlilife_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bijlilife_user -d bijlilife_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: bijlilife-backend
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://bijlilife_user:bijlilife_secret_password@db:5432/bijlilife_db
+      - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY:-demo_key}
+      - HOST=0.0.0.0
+      - PORT=8000
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: bijlilife-frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+
+volumes:
+  postgres_data:
