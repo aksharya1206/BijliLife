@@ -37,3 +37,4 @@ async def cheer_society(society_id: int) -> Dict[str, Any]:
         "new_sparks_balance": user_state["sparks_balance"],
         "society_total_sparks": soc["total_sparks"]
     }
+

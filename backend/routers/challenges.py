@@ -48,3 +48,4 @@ async def get_active_user_profile() -> Dict[str, Any]:
         "co2_saved_kg": state["co2_saved_kg"],
         "completed_count": len(state["completed_challenges"])
     }
+

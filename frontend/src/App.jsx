@@ -33,7 +33,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#0b0f19] text-slate-100 flex flex-col font-sans">
-      
+
       {/* Toast Notification Container */}
       {toast && (
         <div className="fixed bottom-6 right-6 z-50 animate-in slide-in-from-bottom-5 duration-300">
@@ -56,11 +56,11 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
-        
+
         {/* OVERVIEW / DASHBOARD VIEW */}
         {activeTab === 'overview' && (
           <div className="space-y-6">
-            
+
             {/* Citizen Welcome & Peak Shaving Hero Banner */}
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950/50 via-gray-900 to-indigo-950/40 border border-gray-800 p-6 sm:p-8 shadow-2xl">
               <div className="relative z-10 max-w-2xl space-y-3">
@@ -109,7 +109,7 @@ export default function App() {
 
             {/* Live Telemetry KPI Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              
+
               {/* Active Bill Consumption */}
               <div className="p-4 rounded-2xl bg-[#111827] border border-gray-800 space-y-1">
                 <div className="flex items-center justify-between text-[11px] font-bold text-gray-400 uppercase">
@@ -172,7 +172,7 @@ export default function App() {
 
             {/* Split Section: GERC Tariff Breakdown & Flash Mission Highlight */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-              
+
               {/* Tariff Telescopic Slabs (7 Cols) */}
               <div className="lg:col-span-7 p-6 rounded-2xl bg-[#111827] border border-gray-800 shadow-xl space-y-4">
                 <div className="flex items-center justify-between border-b border-gray-800 pb-3">
@@ -234,7 +234,7 @@ export default function App() {
 
               {/* Peak Shaving & Society Derby Highlight (5 Cols) */}
               <div className="lg:col-span-5 space-y-4">
-                
+
                 {/* Active Afternoon Peak Callout */}
                 <div className="p-5 rounded-2xl bg-amber-500/10 border border-amber-500/30 space-y-3">
                   <div className="flex items-center justify-between">
@@ -357,3 +357,4 @@ export default function App() {
     </div>
   );
 }
+

@@ -252,3 +252,4 @@ Follow these steps for a complete evaluation of the prototype:
 ---
 
 © 2026 BijliLiFE Platform. Developed for Mission LiFE Citizen Engagement Challenge (Track 1: Green Energy & Sustainability - GEDA / HC26-GEDA01).
+

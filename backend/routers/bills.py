@@ -85,3 +85,4 @@ async def calculate_ac_temperature_savings(req: AcOptimizationRequest):
         days_per_month=req.days_per_month,
         marginal_rate=req.marginal_rate
     )
+

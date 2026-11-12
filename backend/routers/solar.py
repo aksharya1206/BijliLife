@@ -63,3 +63,4 @@ async def submit_solar_quote(req: SolarQuoteCreate) -> Dict[str, Any]:
         "sparks_awarded": 200,
         "new_sparks_balance": user_state["sparks_balance"]
     }
+

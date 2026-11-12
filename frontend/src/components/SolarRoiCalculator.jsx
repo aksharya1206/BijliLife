@@ -33,7 +33,7 @@ export default function SolarRoiCalculator({ onNavigateToVendors }) {
 
   return (
     <div className="space-y-6">
-      
+
       {/* PM Surya Ghar & Gujarat Solar Banner */}
       <div className="p-6 rounded-2xl bg-gradient-to-r from-amber-950/40 via-gray-900 to-emerald-950/30 border border-amber-500/30 shadow-xl space-y-4 glow-amber">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -241,3 +241,4 @@ export default function SolarRoiCalculator({ onNavigateToVendors }) {
     </div>
   );
 }
+

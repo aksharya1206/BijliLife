@@ -155,3 +155,4 @@ def calculate_gerc_tariff(
         trees_equivalent=trees,
         slab_breakdown=slab_breakdown
     )
+

@@ -35,7 +35,7 @@ export default function SocietyLeaderboard() {
 
   return (
     <div className="space-y-6">
-      
+
       {/* Top Banner with Derby Metrics */}
       <div className="p-6 rounded-2xl bg-gradient-to-r from-gray-900 via-indigo-950/40 to-[#111827] border border-indigo-500/30 shadow-xl space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -91,21 +91,19 @@ export default function SocietyLeaderboard() {
       <div className="flex items-center gap-2 border-b border-gray-800 pb-2">
         <button
           onClick={() => setActiveTab('derby')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 ${
-            activeTab === 'derby'
+          className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 ${activeTab === 'derby'
               ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-900/30'
               : 'text-gray-400 hover:text-white hover:bg-gray-800'
-          }`}
+            }`}
         >
           <Building2 className="w-4 h-4" /> Inter-Society Derby (Ward vs Ward)
         </button>
         <button
           onClick={() => setActiveTab('flats')}
-          className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 ${
-            activeTab === 'flats'
+          className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 ${activeTab === 'flats'
               ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-900/30'
               : 'text-gray-400 hover:text-white hover:bg-gray-800'
-          }`}
+            }`}
         >
           <Users className="w-4 h-4" /> Gokuldham Residency (Flat Leaderboard)
         </button>
@@ -117,11 +115,10 @@ export default function SocietyLeaderboard() {
           {data?.inter_society_leagues.map((soc) => (
             <div
               key={soc.id}
-              className={`p-4 rounded-2xl border transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 ${
-                soc.is_user_society
+              className={`p-4 rounded-2xl border transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 ${soc.is_user_society
                   ? 'bg-emerald-500/5 border-emerald-500/40 shadow-lg glow-green'
                   : 'bg-[#111827] border-gray-800 hover:border-gray-700'
-              }`}
+                }`}
             >
               <div className="flex items-center gap-3.5">
                 {getRankBadge(soc.rank)}
@@ -172,11 +169,10 @@ export default function SocietyLeaderboard() {
                 <button
                   onClick={() => handleCheer(soc.id, soc.name)}
                   disabled={cheeredMap[soc.id]}
-                  className={`px-3 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 ${
-                    cheeredMap[soc.id]
+                  className={`px-3 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 ${cheeredMap[soc.id]
                       ? 'bg-gray-800 text-gray-500 border border-gray-700 cursor-not-allowed'
                       : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-900/30 hover:scale-105 active:scale-95'
-                  }`}
+                    }`}
                 >
                   <HeartHandshake className="w-3.5 h-3.5" />
                   {cheeredMap[soc.id] ? 'Cheered!' : 'Cheer (+10)'}
@@ -198,11 +194,10 @@ export default function SocietyLeaderboard() {
           {data?.my_society_internal_ranks.map((flat) => (
             <div
               key={flat.flat_number}
-              className={`p-3.5 rounded-xl border transition-all flex items-center justify-between ${
-                flat.is_current_user
+              className={`p-3.5 rounded-xl border transition-all flex items-center justify-between ${flat.is_current_user
                   ? 'bg-emerald-500/10 border-emerald-500/50 shadow-md glow-green'
                   : 'bg-[#111827] border-gray-800'
-              }`}
+                }`}
             >
               <div className="flex items-center gap-3">
                 {getRankBadge(flat.rank)}
@@ -237,3 +232,4 @@ export default function SocietyLeaderboard() {
     </div>
   );
 }
+

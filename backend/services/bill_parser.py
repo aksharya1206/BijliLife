@@ -242,3 +242,4 @@ def get_sample_bill(sample_id: str) -> BillParseResponse:
         tariff_calculation=tariff_calc,
         raw_snippet=sample["raw_snippet"]
     )
+

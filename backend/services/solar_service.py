@@ -322,3 +322,4 @@ async def get_solar_weather_irradiance(city: str = "Ahmedabad") -> WeatherSolarI
 def get_all_geda_vendors() -> List[SolarVendorOut]:
     """Returns list of GEDA-empanelled EPC solar vendors."""
     return [SolarVendorOut(**v) for v in GEDA_VENDORS]
+

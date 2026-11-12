@@ -187,3 +187,4 @@ def calculate_ac_savings(
         life_status=status,
         recommendation=rec
     )
+

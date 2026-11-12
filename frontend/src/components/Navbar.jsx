@@ -12,7 +12,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
     <header className="sticky top-0 z-40 bg-[#0b0f19]/90 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          
+
           {/* Logo & Mission LiFE / GEDA Badges */}
           <div className="flex items-center gap-3">
             <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-teal-400 text-white shadow-lg shadow-emerald-900/30">
@@ -40,61 +40,55 @@ export default function Navbar({ activeTab, setActiveTab }) {
           <nav className="hidden md:flex items-center gap-1 bg-gray-900/80 p-1 rounded-xl border border-gray-800 text-xs font-medium">
             <button
               onClick={() => setActiveTab('overview')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
-                activeTab === 'overview'
+              className={`px-3 py-1.5 rounded-lg transition-all ${activeTab === 'overview'
                   ? 'bg-emerald-500 text-white shadow'
                   : 'text-gray-300 hover:text-white hover:bg-gray-800'
-              }`}
+                }`}
             >
               Dashboard
             </button>
             <button
               onClick={() => setActiveTab('rupee-mirror')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
-                activeTab === 'rupee-mirror'
+              className={`px-3 py-1.5 rounded-lg transition-all ${activeTab === 'rupee-mirror'
                   ? 'bg-emerald-500 text-white shadow'
                   : 'text-gray-300 hover:text-white hover:bg-gray-800'
-              }`}
+                }`}
             >
               Rupee Mirror
             </button>
             <button
               onClick={() => setActiveTab('flash-missions')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
-                activeTab === 'flash-missions'
+              className={`px-3 py-1.5 rounded-lg transition-all ${activeTab === 'flash-missions'
                   ? 'bg-emerald-500 text-white shadow'
                   : 'text-gray-300 hover:text-white hover:bg-gray-800'
-              }`}
+                }`}
             >
               Flash Quests
             </button>
             <button
               onClick={() => setActiveTab('leaderboard')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
-                activeTab === 'leaderboard'
+              className={`px-3 py-1.5 rounded-lg transition-all ${activeTab === 'leaderboard'
                   ? 'bg-emerald-500 text-white shadow'
                   : 'text-gray-300 hover:text-white hover:bg-gray-800'
-              }`}
+                }`}
             >
               Society Derby
             </button>
             <button
               onClick={() => setActiveTab('solar-roi')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
-                activeTab === 'solar-roi'
+              className={`px-3 py-1.5 rounded-lg transition-all ${activeTab === 'solar-roi'
                   ? 'bg-emerald-500 text-white shadow'
                   : 'text-gray-300 hover:text-white hover:bg-gray-800'
-              }`}
+                }`}
             >
               PM Surya Ghar
             </button>
             <button
               onClick={() => setActiveTab('vendor-map')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
-                activeTab === 'vendor-map'
+              className={`px-3 py-1.5 rounded-lg transition-all ${activeTab === 'vendor-map'
                   ? 'bg-emerald-500 text-white shadow'
                   : 'text-gray-300 hover:text-white hover:bg-gray-800'
-              }`}
+                }`}
             >
               GEDA GIS Map
             </button>
@@ -102,7 +96,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
 
           {/* Right Action Bar: DISCOM, Sparks Badge, Upload Bill */}
           <div className="flex items-center gap-2 sm:gap-3">
-            
+
             {/* DISCOM Dropdown */}
             <div className="relative">
               <button
@@ -127,11 +121,10 @@ export default function Navbar({ activeTab, setActiveTab }) {
                         switchDiscom(disc);
                         setIsDiscomDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-3 py-1.5 text-xs transition flex items-center justify-between ${
-                        user.discom === disc
+                      className={`w-full text-left px-3 py-1.5 text-xs transition flex items-center justify-between ${user.discom === disc
                           ? 'bg-emerald-500/20 text-emerald-400 font-semibold'
                           : 'text-gray-300 hover:bg-gray-800 hover:text-white'
-                      }`}
+                        }`}
                     >
                       {disc}
                       {user.discom === disc && <span className="text-emerald-400 text-xs">✓</span>}
@@ -180,3 +173,4 @@ export default function Navbar({ activeTab, setActiveTab }) {
     </header>
   );
 }
+

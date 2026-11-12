@@ -162,3 +162,4 @@ def downgrade() -> None:
     op.drop_table('electricity_bills')
     op.drop_table('users')
     op.drop_table('societies')
+

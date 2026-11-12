@@ -338,3 +338,4 @@ def get_society_leaderboards() -> SocietyLeaderboardResponse:
 def get_user_state() -> Dict[str, Any]:
     """Retrieve active user profile state."""
     return user_state
+

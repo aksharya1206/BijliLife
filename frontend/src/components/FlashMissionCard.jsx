@@ -103,7 +103,7 @@ export default function FlashMissionCard() {
 
   return (
     <div className="space-y-6">
-      
+
       {/* Quests Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-5 rounded-2xl bg-gradient-to-r from-amber-950/30 via-gray-900 to-[#111827] border border-amber-500/20">
         <div className="flex items-center gap-3">
@@ -140,20 +140,19 @@ export default function FlashMissionCard() {
           return (
             <div
               key={ch.id}
-              className={`p-5 rounded-2xl border transition-all flex flex-col justify-between space-y-4 ${
-                isDone
+              className={`p-5 rounded-2xl border transition-all flex flex-col justify-between space-y-4 ${isDone
                   ? 'bg-gray-900/40 border-gray-800 opacity-80'
                   : 'bg-[#111827] border-gray-700/80 hover:border-emerald-500/50 shadow-lg glow-green'
-              }`}
+                }`}
             >
               <div className="space-y-3">
-                
+
                 {/* Category & Countdown */}
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
                     {ch.category.replace('_', ' ')}
                   </span>
-                  
+
                   <div className="flex items-center gap-1 font-mono text-[11px] text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-lg border border-amber-500/20">
                     <Clock className="w-3 h-3" />
                     <span>{formatTime(ch.time_remaining_seconds)}</span>
@@ -225,7 +224,7 @@ export default function FlashMissionCard() {
       {selectedChallenge && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="relative w-full max-w-lg bg-[#111827] border border-gray-700 rounded-2xl shadow-2xl p-6 space-y-5">
-            
+
             <div className="flex items-center justify-between border-b border-gray-800 pb-3">
               <div className="flex items-center gap-2">
                 <Camera className="w-5 h-5 text-emerald-400" />
@@ -328,3 +327,4 @@ export default function FlashMissionCard() {
     </div>
   );
 }
+

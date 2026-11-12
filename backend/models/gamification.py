@@ -94,3 +94,4 @@ class SolarQuoteRequest(Base):
 
     user = relationship("User", back_populates="quote_requests")
     vendor = relationship("SolarVendor", back_populates="quotes")
+

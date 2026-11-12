@@ -75,3 +75,4 @@ class SolarQuoteCreate(BaseModel):
     roof_area_sqft: float
     proposed_kw: float
     consumer_notes: Optional[str] = None
+

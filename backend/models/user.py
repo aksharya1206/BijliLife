@@ -26,3 +26,4 @@ class User(Base):
     bills = relationship("ElectricityBill", back_populates="user", cascade="all, delete-orphan")
     ledger_entries = relationship("SparksLedger", back_populates="user", cascade="all, delete-orphan")
     quote_requests = relationship("SolarQuoteRequest", back_populates="user", cascade="all, delete-orphan")
+

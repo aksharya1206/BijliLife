@@ -87,3 +87,4 @@ class AcOptimizationResponse(BaseModel):
     percentage_savings: float
     life_status: str # "SUPER_EFFICIENT", "MISSION_LIFE_OPTIMAL", "HIGH_CONSUMPTION"
     recommendation: str
+

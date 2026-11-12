@@ -71,3 +71,4 @@ class SocietyLeaderboardResponse(BaseModel):
     user_society_rank: int
     user_sparks_balance: int
     total_derby_sparks: int
+
