@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: bijlilife_user
-      POSTGRES_PASSWORD: bijlilife_secret_password
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bijlilife_secret_password}
       POSTGRES_DB: bijlilife_db
     ports:
       - "5432:5432"
@@ -49,4 +49,3 @@ services:
 
 volumes:
   postgres_data:
-
